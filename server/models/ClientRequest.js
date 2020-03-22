@@ -14,7 +14,7 @@ const addTagsToRequest = (tagsArr, requestParameters) => {
   if (tagsArr && tagsArr.length) {
     const tags = tagsArr
       .reduce((accumulator, currentTag) => {
-        const tag = encodeURIComponent(currentTag.trim());
+        const tag = currentTag.trim();
 
         if (tag !== '' && accumulator.indexOf(tag) === -1) {
           accumulator.push(tag);
@@ -335,7 +335,7 @@ class ClientRequest {
 
     const tags = options.tags
       .reduce((memo, currentTag) => {
-        const tag = encodeURIComponent(currentTag.trim());
+        const tag = currentTag.trim();
 
         if (tag !== '' && memo.indexOf(tag) === -1) {
           memo.push(tag);

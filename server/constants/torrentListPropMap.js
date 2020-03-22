@@ -167,8 +167,7 @@ torrentListPropMap.set('tags', {
 
     return value
       .split(',')
-      .sort()
-      .map(tag => decodeURIComponent(tag));
+      .sort();
   },
 });
 
